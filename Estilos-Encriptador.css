@@ -1,0 +1,195 @@
+/* Configuracion para personalizacion en web de escritorio */
+:root{
+    --azul: #0a3871;
+    --blanco: #f3f5fc;
+    --blanco-claro: #D8DFE8;
+
+    --fuente-Inter: "Inter", sans-serif;
+}
+
+html{
+    font-size: 63%;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+body{
+    background-color: var(--blanco);
+    font-family: var(--fuente-Inter);
+}
+
+header{
+    margin-bottom: 5rem;
+    width: 60%;
+    margin-top: 2.5%;
+}
+
+header img{
+    width: 120px;
+    height: 48px;
+}
+
+.hidden{
+    display: none;
+}
+.seccion-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+
+}
+
+.texto{
+    width:100%;
+    max-width: 650px;
+    height: 65dvh;
+    outline: none;
+    border-color: transparent;
+    background: transparent;
+    font-size: 3.2rem;
+    color: var(--azul);
+    font-family: var(--fuente-Inter);
+    margin-bottom: 3rem;
+    overflow: auto;
+
+}
+
+::placeholder{    
+    color: var(--azul);
+}
+
+.alert_msj{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    gap: .7rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+
+}
+button{
+    margin-inline: 24px;
+    margin-left: 22px;
+}
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.btn-encriptar{
+    background: var(--azul);
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--azul);
+    
+}
+
+.btn-desencriptar{
+    background: transparent;
+    color: var(--azul);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--azul);
+    
+}
+
+.resultado{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -6%;
+    gap: 10rem;
+    max-width: 40rem;
+    width: 100%;
+    height: 83dvh;
+    border-radius: 32px;
+}
+
+.resultado h3{
+    margin-left: 10%;
+}
+
+.resultado p{
+    /*justify-content: center;
+    align-items: center;*/
+    margin-left: 5%;
+    text-align: justify;
+    width: 90%;
+    height: 50%;
+
+}
+
+.copiar{
+    margin-top: 10%;
+}
+
+.analizador{
+    display: block;
+}
+
+/* Configuracion para responsi en dispositivos smarphones */
+@media screen and (max-width:768px) {
+    header img{
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    main{
+        flex-direction: column;
+    }
+    
+    .botones{
+        justify-items:center;
+    }
+    .resultado{
+        height: auto;
+        max-width: 670px;
+        margin-top: 3rem;
+        min-height: 186px;
+        margin-left: 1%;
+    }
+    .analizador{
+        display: none;
+    }
+    
+    
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0 #0004;
+    animation: l2 1.5s infinite linear;
+    position: relative;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 #0004;
+    animation: inherit;
+    animation-delay: -0.5s;
+  }
+  .loader:after {
+    animation-delay: -1s;
+  }
+  @keyframes l2 {
+      100% {box-shadow: 0 0 0 40px #0000}
+  }

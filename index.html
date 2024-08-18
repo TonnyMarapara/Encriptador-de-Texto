@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos-Encriptador.css">
+    <link rel="shortcut icon" href="img/encryption_image.png" type="image/x-icon">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo de alura">
+    </header>
+    <main>
+        <form class="seccion-formulario">
+            <textarea class="texto" name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="alert_msj">
+                <span> ℹ️ Solo letras minusculas y sin acentos</span>
+            </div>
+            <div class="botones">
+                <button type="button" class="btn-encriptar" onclick="Encriptar()">Encriptar</button>
+                <button type="button" class="btn-desencriptar" onclick="Desencriptar()">Desencriptar</button>
+            </div>
+            </div>
+        </form>
+        <aside class="resultado">
+            <img src="img/Muñeco.png" alt="analizador" class="analizador">
+            <div class="loader hidden"></div>
+            <div class="mensaje-resultado">
+                <h3 class="titulo-resultado">Ningun mensaje fue encontrado</h3>
+                <p class="texto-resultado">Ingrese el texto que deseas encriptar o desencriptar</p>
+                <button class="rcopiar btn-encriptar btn-desencriptar copiar hidden">Copiar</button>
+            </div>
+        </aside>
+    </main>   
+</body>
+<script src="code-java.js"></script>
+</html>
